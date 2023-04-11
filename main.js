@@ -107,37 +107,261 @@
 
 //IF ANIDADOS
 
-let precioProducto = Number (prompt("Ingres el precio del producto:")) ;
+// let precioProducto = Number (prompt("Ingres el precio del producto:")) ;
 
-if (precioProducto < 20){
-  console.log("El precio del producto es menor a 20 pesos");
-} else if (precioProducto < 50){
-  console.log("El precio ingresado es menor que 50 pesos");
-} else if (precioProducto < 100){
-  console.log("El precio ingresado es menor que 100 pesos");
-} else {
-  console.log("El precio ingresado es mayor a 100 pesos");
-}
+// if (precioProducto < 20){
+//   console.log("El precio del producto es menor a 20 pesos");
+// } else if (precioProducto < 50){
+//   console.log("El precio ingresado es menor que 50 pesos");
+// } else if (precioProducto < 100){
+//   console.log("El precio ingresado es menor que 100 pesos");
+// } else {
+//   console.log("El precio ingresado es mayor a 100 pesos");
+// }
 
-//VARIABLES BOOLEANAS
-let edad = Number (prompt("Ingrese su edad"));
-const ESMAYOR = (edad >= 18);
+// //VARIABLES BOOLEANAS
 
-if (ESMAYOR) {
-  alert("Bienvenido/a al sitio web: ");
-} else {
-  alert("Debes ser mayor de edad para ingresar");
-}
+// let edad = Number (prompt("Ingrese su edad"));
+// const ESMAYOR = (edad >= 18);
+
+// if (ESMAYOR) {
+//   alert("Bienvenido/a al sitio web: ");
+// } else {
+//   alert("Debes ser mayor de edad para ingresar");
+// }
+
+//OPERADORES LÓGICOS
+
+// let nombreUsuario = prompt("Ingrese su nombre: ");
+// let apellidoUsuario = prompt("Ingrese su apellido: ");
+
+// if ((nombreUsuario != "") || (apellidoUsuario != "")){
+//     alert("Bienvenido" + nombreUsuario + " " + apellidoUsuario);
+// } else {
+//   alert("ERROR: falta algún dato!");
+// } 
+    
+
+//CICLOS 
+//CICLO FOR
+
+//INCREMENTO
+// for (let i= 0; i<4;i++){
+// console.log("Iteración n°: " + i);
+// }
+
+//DECREMENTO
+// for (let i= 4; i>=1;i--){
+// 	console.log("Iteración n°: " + i);
+// 	}
+
+//TURNERA
+
+// for (let i= 1; i<=20;i++){
+// 	let ingresarNombre = prompt("Ingresar nombre: ");
+// 	alert("Turno N° "+ " " + i + " Nombre: " + ingresarNombre);
+// }
+
+//CICLO WHILE
+//PROGRAMITA DONDE EL USUARIO CARGA DATOS HASTA QUE INGRESA ESC 
+
+// let entrada = prompt("Ingrese un dato: ");
+
+// while (entrada != "ESC"){
+// 	alert("El usuario ingresó: " + entrada);
+// 	entrada = prompt("Ingrese oro dato: ");
+// }
+
+//LA PALABRA CORRECTA
+
+// let palabra = "";
+
+// while (palabra != "Hola"){
+// 	palabra = prompt("Ingrese la palabra correcta");
+// } 
+
+// alert("Ingresaste la palabra correcta!");
+
+//CICLO DO WHILE
+//PROGRAMITA QUE CORTA CUANDO EL USUARIO NO INGRESA UN NÚMERO
 
 
+// let otroNumero = 0;
+
+// do {
+// 	otroNumero= prompt("Ingrese un número: ");
+// 	console.log(otroNumero);
+	
+// } while (parseInt(otroNumero));
+
+/*-------------CLASE 04-----------*/
+
+//FUNCIONES
+
+//DECLARACIONES
+
+// function saludar (){
+//   console.log("Hola estudiantes");
+// }
 
 
+//LLAMADO (PUEDO LLAMAR A LA FUNCIÓN EN CUALQUIER PARTE DEL CÓDIGO)
+// saludar();
+
+// PEDIR NOMBRE A LA VIEJA USANSA
+
+// let nombreIngresado = prompt("Ingrese su nombre: ");
+// alert("El nombre ingresado es: " + nombreIngresado);
+
+// nombreIngresado = prompt("Ingrese su nombre: ");
+// alert("El nombre ingresado es: " + nombreIngresado);
+// nombreIngresado = prompt("Ingrese su nombre: ");
+// alert("El nombre ingresado es: " + nombreIngresado);
+
+//PERO AHORA CON FUNCIONES
+
+//FUNCIONES S/ PARÁMETROS
+
+// function solicitarNombre(){
+//   let nombreIngresado = prompt("Ingresar nombre: ");
+//   alert("El nombre ingreado es: " + nombreIngresado);
+// }
+
+//LO BUENO DE LAS FUNCIONES ES QUE LAS PUEDO LLAMAR DONDE QUIERA EN MI CÓDIGO
+
+// solicitarNombre();
+// solicitarNombre();
+
+//FUNCIONES S/ PARÁMETROS
+
+// function conParametros(parametro1, parametro2){
+//   console.log(parametro1 + " " + parametro2);
+// }
+
+// conParametros("Hola", "Coder");
+// conParametros("Cursando", "JS");
+
+//SUMAR Y MOSTRA
+
+// let resultado = 0;
+
+// function sumar (primerNumero, segundoNumero){
+//   resultado = primerNumero + segundoNumero;
+// }
+
+// function mostrar (mensaje){
+//   console.log(mensaje);
+// }
+
+// sumar(10,5);
+// mostrar(resultado);
+
+//RETURN 
+
+// function sumar (primerNumero, segundoNumero){
+//   return primerNumero + segundoNumero;
+// }
+
+// let resultado = sumar(5,8);
+// console.log(resultado);
 
 
+//FUNCIÓN CON SWITCH
+
+// function calculadora (primerNumero, segundoNumero, operacion){
+//   switch(operacion){
+//     case "+":
+//       return primerNumero + segundoNumero;
+//     break; 
+
+//     case "-":
+//       return primerNumero - segundoNumero;
+//     break; 
+
+//     case "*":
+//       return primerNumero * segundoNumero;
+//     break;
+    
+//     case "/":
+//       return primerNumero / segundoNumero;
+//     break; 
+
+//     default: 
+//     return 0;
+//     break;
+//   }
+// }
+
+// console.log(calculadora(10,5,"/"));
+
+//SCOPE
+
+//VARIABLES GLOBAL
+
+// let resultado = 0;
+
+// function sumar (primerNumero, segundoNumero){
+//   resultado = primerNumero + segundoNumero;
+//   /*VARIABLE LOCAL
+//   let resultado = primerNumero + segundoNumero;*/
+// }
+
+// sumar(20,30);
+// console.log(resultado);
+
+//IDENTIFICACION VARIABLES GLOBALES Y LOCALES
+
+//VARIABLE GLOBAL
+// let nombre = "Román Riquelme";
+
+// function saludar(){
+  //VARIABLE LOCAL 
+  // let nombre = "Martín Palermo";
+  // console.log(nombre);
+// }
+
+//ACCEDO A LA VARIABLE NOMBRE (GLOBAL)
+// console.log(nombre);
+//ACCEDO A LA VARIABLE NOMBRE (LOCAL)
+// saludar();
+
+//FUNCIONES ANÓNIMAS
+
+// const sumar = function (a,b) {
+//   return a + b;
+// }
+
+// const restar = function (a,b) {
+//   return a - b;
+// }
+
+// console.log(sumar(10,20));
+// console.log(restar(20,10));
+
+//FUNCIONES FLECHA
+
+// const sumar =  (a,b) => {
+//   return a + b;
+// }
+
+//SI ES UNA FUNCIÓN DE UNA SOLA LÍNEA CON RETURN PODEMOS EVITAR ESCRIBIR EL CUERPO
+// const restar = (a,b) => a - b;
 
 
+// console.log(sumar(10,20));
+// console.log(restar(30,10));
 
+//EJEMPLO APLICADO: CALCULAR PRECIO
 
+const suma = (a,b) => a + b;
+const resta = (a,b) => a - b;
+
+const iva = z => z * 0.21;
+let precioProducto = 500;
+let descuento = 50;
+
+let nuevoPrecio = resta(suma(precioProducto, iva(precioProducto)), descuento);
+console.log(nuevoPrecio);
 
 
 
