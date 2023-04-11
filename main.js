@@ -108,6 +108,7 @@
 //IF ANIDADOS
 
 // let precioProducto = Number (prompt("Ingres el precio del producto:")) ;
+<<<<<<< HEAD
 
 // if (precioProducto < 20){
 //   console.log("El precio del producto es menor a 20 pesos");
@@ -371,9 +372,92 @@ console.log(nuevoPrecio);
 
 
 
+=======
+>>>>>>> 9e6d65ef142d71f7c45fbfc0c4b7b49952dce0ef
 
+// if (precioProducto < 20){
+//   console.log("El precio del producto es menor a 20 pesos");
+// } else if (precioProducto < 50){
+//   console.log("El precio ingresado es menor que 50 pesos");
+// } else if (precioProducto < 100){
+//   console.log("El precio ingresado es menor que 100 pesos");
+// } else {
+//   console.log("El precio ingresado es mayor a 100 pesos");
+// }
 
+// //VARIABLES BOOLEANAS
 
+// let edad = Number (prompt("Ingrese su edad"));
+// const ESMAYOR = (edad >= 18);
+
+// if (ESMAYOR) {
+//   alert("Bienvenido/a al sitio web: ");
+// } else {
+//   alert("Debes ser mayor de edad para ingresar");
+// }
+
+//OPERADORES LÓGICOS
+
+// let nombreUsuario = prompt("Ingrese su nombre: ");
+// let apellidoUsuario = prompt("Ingrese su apellido: ");
+
+// if ((nombreUsuario != "") || (apellidoUsuario != "")){
+//     alert("Bienvenido" + nombreUsuario + " " + apellidoUsuario);
+// } else {
+//   alert("ERROR: falta algún dato!");
+// } 
+    
+
+//CICLOS 
+//CICLO FOR
+
+//INCREMENTO
+// for (let i= 0; i<4;i++){
+// console.log("Iteración n°: " + i);
+// }
+
+//DECREMENTO
+// for (let i= 4; i>=1;i--){
+// 	console.log("Iteración n°: " + i);
+// 	}
+
+//TURNERA
+
+// for (let i= 1; i<=20;i++){
+// 	let ingresarNombre = prompt("Ingresar nombre: ");
+// 	alert("Turno N° "+ " " + i + " Nombre: " + ingresarNombre);
+// }
+
+//CICLO WHILE
+//PROGRAMITA DONDE EL USUARIO CARGA DATOS HASTA QUE INGRESA ESC 
+
+// let entrada = prompt("Ingrese un dato: ");
+
+// while (entrada != "ESC"){
+// 	alert("El usuario ingresó: " + entrada);
+// 	entrada = prompt("Ingrese oro dato: ");
+// }
+
+//LA PALABRA CORRECTA
+
+// let palabra = "";
+
+// while (palabra != "Hola"){
+// 	palabra = prompt("Ingrese la palabra correcta");
+// } 
+
+// alert("Ingresaste la palabra correcta!");
+
+//CICLO DO WHILE
+//PROGRAMITA QUE CORTA CUANDO EL USUARIO NO INGRESA UN NÚMERO
+
+let otroNumero = 0;
+
+do {
+	otroNumero= prompt("Ingrese un número: ");
+	console.log(otroNumero);
+	
+} while (parseInt(otroNumero));
 
 
 
