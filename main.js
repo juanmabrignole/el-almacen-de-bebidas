@@ -659,24 +659,135 @@ const productos = ["harina", 500, "sku302", true, "pureza", "disco"];
 // alert(nuevaLista.join("\n"));
 
 //EJEMPLO APLICADO: ELIMINAR CUALQUIER ELEMENTO
-const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
+// const nombres = ["Rita", "Pedro", "Miguel", "Ana", "Vanesa"];
 
-console.log(nombres);
+// console.log(nombres);
 
-//recibo el elemento a borrar por parámetro
+// recibo el elemento a borrar por parámetro
 
-const eliminar = (nombre) => {
-  //busco su indice en el array
-  let index = nombres.indexOf(nombre);
+// const eliminar = (nombre) => {
+//   busco su indice en el array
+//   let index = nombres.indexOf(nombre);
 
-  //si existe el indíce, o sea, es distinto de -1, lo borramos con splice
-  if (index != -1){
-    nombres.splice(index, 1);
-  }
-}
+//   si existe el indíce, o sea, es distinto de -1, lo borramos con splice
+//   if (index != -1){
+//     nombres.splice(index, 1);
+//   }
+// }
 
-eliminar("Pedro");
-console.log(nombres);
+// eliminar("Pedro");
+// console.log(nombres);
+
+/*-------------CLASE 07-----------*/
+/*-------------FUNCIONES DE ORDEN SUPERIOR-----------*/
+
+//ABSTRACCION
+//LA MISMA FUNCION, PERO SIRVE PARA CALCULAR CUALQUIER RANGO
+
+// function sumarRangos(min,max) {
+  
+//   let total = 0;
+  
+//   for (let i=min; i<=max; i++){
+//     total += i;
+//   }
+//   return total;
+// }
+
+// console.log(sumarRangos(1,10));//55
+// console.log(sumarRangos(2,8));// 35
+// console.log(sumarRangos(2,4));// 9
+
+// let sumaEntreDosYCuatro = sumarRangos(2,4);
+// console.log(sumaEntreDosYCuatro);
+
+///RETORNAR FUNCIONES 
+
+// function mayorQue (n){
+//   return (m) => m > n;
+// }
+
+// let mayorQueDiez = mayorQue(20);
+
+// console.log(mayorQueDiez(19));// true
+// console.log(mayorQueDiez(8));// false
+
+///RETORNAR FUNCIONES II
+
+// function asignarOperacion (op){
+//   if (op=="sumar"){
+//     return (a,b) => a + b;
+//   } else if (op=="restar"){
+//     return (a,b) => a-b;
+//   }
+// }
+
+// let suma = asignarOperacion ("sumar");
+// let resta = asignarOperacion ("restar");
+
+// console.log(suma(10,20));
+// console.log(resta(5,2));
+
+//METODOS NATIVOS DE JS PARA BUSQUEDA Y TRANSFORMACION
+//METODO FOR EACH // POR CADA UNO
+
+// const numeros = [1,2,3,4,5,6];
+
+// numeros.forEach( (num)  => {
+//   console.log(num);
+// });
+
+//METODO FIND DEVUELVE EL PRIMER OBJETO QUE CUMPLA CON LA CONDICION, SINO UNDEFINED
+
+const cervezasLatas = [
+  {
+    nombre: "patagonia",
+    precio: 700
+  },
+  {
+    nombre: "patagonia",
+    precio: 800
+  },
+  {
+    nombre: "estela",
+    precio: 500
+  },
+  {
+    nombre: "andes origen",
+    precio: 600
+  },
+  {
+    nombre: "brahma",
+    precio: 450
+  },
+  {
+    nombre: "corona origen",
+    precio: 450
+  },
+];
+
+// const resultado = cervezasLatas.find( (cerveza) => cerveza.nombre === "patagonia");
+// const resultado2 = cervezasLatas.find( (cerveza) => cerveza.nombre === "quilmes");
+
+// console.log(resultado);
+// console.log(resultado2);
+
+//METODO FILTER RETORNA EL ARRAY CON EL O LOS ELEMENTOS QUE CUMPLAN LA CONDICION, SINO VACIO
+
+// const resultado3 = cervezasLatas.filter( (cerveza) => cerveza.precio < 600);
+// const resultado4 = cervezasLatas.filter ( (cerveza) => cerveza.nombre.includes("origen"));
+// // console.log(resultado3);
+// console.log(resultado4);
+
+
+
+
+
+
+
+
+
+
 
 
 
