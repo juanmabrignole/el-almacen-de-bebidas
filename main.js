@@ -738,6 +738,54 @@ const productos = ["harina", 500, "sku302", true, "pureza", "disco"];
 // });
 
 //METODO FIND DEVUELVE EL PRIMER OBJETO QUE CUMPLA CON LA CONDICION, SINO UNDEFINED
+//FIND CON PROMPT
+// let cervezaElegida = prompt("Ingrese la cerveza: ");
+// console.log(cervezasLatas.find ((cervezas) => cervezas.nombre === cervezaElegida));
+
+// const resultado = cervezasLatas.find( (cerveza) => cerveza.nombre === "patagonia");
+// const resultado2 = cervezasLatas.find( (cerveza) => cerveza.nombre === "quilmes");
+
+// console.log(resultado);
+// console.log(resultado2);
+
+//METODO FILTER RETORNA EL ARRAY CON EL O LOS ELEMENTOS QUE CUMPLAN LA CONDICION, SINO VACIO
+
+// const resultado3 = cervezasLatas.filter( (cerveza) => cerveza.precio < 600);
+// const resultado4 = cervezasLatas.filter ( (cerveza) => cerveza.nombre.includes("origen"));
+// // console.log(resultado3);
+// console.log(resultado4);
+// console.log(cervezasLatas);
+
+//METODO SOME RETORNA TRUE O FALSE SI ENCUENTRA O NO ALGUN ELEMENTO QUE CUMPLA CON LA CONDICION
+
+// console.log(cervezasLatas.some((cerveza) => cerveza.nombre == "corona origen"));
+// console.log(cervezasLatas.some((cerveza) => cerveza.nombre == "palermo"));
+
+// const nombresCervezas = cervezasLatas.map ((cervezas) => cervezas.nombre);
+// console.log(nombresCervezas);
+
+//METODO MAP CON LOS PRECIOS MODIFICADOS
+
+// const preciosActualizados = cervezasLatas.map((cerveza) => {
+//   return {
+//     nombre: cerveza.nombre,
+//     precio: cerveza.precio * 1.21
+//   }
+
+// });
+
+// console.log(preciosActualizados);
+// console.log(cervezasLatas);
+
+//METEDODO REDUCE RECORRE EL ARRAY Y NOS RETORNA UN UNICO VALOR, LUEGO DE HACER UNA COMPARACION
+
+// const numeros = [20,335,25,150,900,10];
+
+// const totalCompra = numeros.reduce((acumulador, numero) => acumulador + numero, 0);
+// console.log(totalCompra);
+
+// const compraTotal = cervezasLatas.reduce ((acumulador, cerveza) => acumulador + cerveza.precio ,0)
+// console.log(compraTotal);
 
 const cervezasLatas = [
   {
@@ -766,18 +814,53 @@ const cervezasLatas = [
   },
 ];
 
-// const resultado = cervezasLatas.find( (cerveza) => cerveza.nombre === "patagonia");
-// const resultado2 = cervezasLatas.find( (cerveza) => cerveza.nombre === "quilmes");
+/*-------------CLASE 08-----------*/
+/*-------------FUNCIONES DE ORDEN SUPERIOR II-----------*/
 
-// console.log(resultado);
-// console.log(resultado2);
+//OBJETO MATH
 
-//METODO FILTER RETORNA EL ARRAY CON EL O LOS ELEMENTOS QUE CUMPLAN LA CONDICION, SINO VACIO
+// console.log(Math.PI);
 
-// const resultado3 = cervezasLatas.filter( (cerveza) => cerveza.precio < 600);
-// const resultado4 = cervezasLatas.filter ( (cerveza) => cerveza.nombre.includes("origen"));
-// // console.log(resultado3);
-// console.log(resultado4);
+// // console.log(Math.min(1,2,3,-1,-2,10));
+// // console.log(Math.max(1,2,3,-1,-2,10));
+
+// const pi = Math.PI; // 3.141592653589793
+
+// //CEIL: devuelve el entero mayor o igual más proximo
+// console.log(Math.ceil(pi)); // 4
+
+// //FLOOR: devuelve el entero más cercano, pero redondeado hacia abajo
+// console.log(Math.floor(pi)); // 3
+
+// //ROUND: devuelve el valor de un numero redondeado al entero más cercano
+// console.log(Math.round(pi)); // 3
+
+// //Raíz cuadrada
+// console.log(Math.sqrt(8));
+
+//numeros aleatorios, entre 0 y 1
+// console.log(Math.random());
+// console.log(Math.round(Math.random()));
+
+//numeros aleatorios entre 0 y 10
+// console.log(Math.random() * 10);
+
+// const generarNumeros = () => {
+//   return Math.round (Math.random() * 100);
+// }
+
+// console.log(generarNumeros());
+
+
+
+
+
+
+
+
+
+
+
 
 
 
