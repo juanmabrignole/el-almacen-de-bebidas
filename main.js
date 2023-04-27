@@ -787,32 +787,32 @@ const productos = ["harina", 500, "sku302", true, "pureza", "disco"];
 // const compraTotal = cervezasLatas.reduce ((acumulador, cerveza) => acumulador + cerveza.precio ,0)
 // console.log(compraTotal);
 
-const cervezasLatas = [
-  {
-    nombre: "patagonia",
-    precio: 700
-  },
-  {
-    nombre: "patagonia",
-    precio: 800
-  },
-  {
-    nombre: "estela",
-    precio: 500
-  },
-  {
-    nombre: "andes origen",
-    precio: 600
-  },
-  {
-    nombre: "brahma",
-    precio: 450
-  },
-  {
-    nombre: "corona origen",
-    precio: 450
-  },
-];
+// const cervezasLatas = [
+//   {
+//     nombre: "patagonia",
+//     precio: 700
+//   },
+//   {
+//     nombre: "patagonia",
+//     precio: 800
+//   },
+//   {
+//     nombre: "estela",
+//     precio: 500
+//   },
+//   {
+//     nombre: "andes origen",
+//     precio: 600
+//   },
+//   {
+//     nombre: "brahma",
+//     precio: 450
+//   },
+//   {
+//     nombre: "corona origen",
+//     precio: 450
+//   },
+// ];
 
 /*-------------CLASE 08-----------*/
 /*-------------FUNCIONES DE ORDEN SUPERIOR II-----------*/
@@ -850,6 +850,78 @@ const cervezasLatas = [
 // }
 
 // console.log(generarNumeros());
+
+//LA CLASE DATE
+
+// //FECHA Y HORA ACTUAL
+// console.log(new Date);
+
+// //constructor
+// console.log(new Date(2023,3,24));
+
+// const casiNavidad = new Date ("December 25, 2023,23:59:59");
+// console.log(casiNavidad);
+
+// //obtener un valor de la fecha
+// console.log(casiNavidad.toDateString());
+// console.log(casiNavidad.toLocaleDateString());
+
+// console.log(casiNavidad.getFullYear()); //2023
+// console.log(casiNavidad.getMonth());
+// console.log(casiNavidad.getDate());
+
+/*-------------CLASE 09-----------*/
+/*-------------DOM-----------*/
+
+// console.log(document.body);
+// console.log(document.head);
+
+// FORMAS DE ACCEDER A LOS NODOS
+// let docu = document.getElementById("app");
+// let parrafo = document.getElementById("parrafo1");
+
+// console.log(docu.innerHTML);
+// console.log(parrafo.innerHTML);
+
+// //getElementsByClassName
+// let paginas = document.getElementsByClassName("secciones");
+// console.log(paginas[0].innerHTML);
+// console.log(paginas[1].innerHTML);
+// console.log(paginas[2].innerHTML);
+// console.log(paginas[3].innerHTML);
+// console.log(paginas[4].innerHTML);
+// alert("Bienvenido/a! Usted está en la seccion " + paginas[2].innerHTML);
+
+//getElementsByTagName
+// let contenedores = document.getElementsByTagName("div");
+// console.log(contenedores[0].innerHTML);
+
+//innerText
+// let titulo = document.getElementById("titulo");
+// console.log(titulo.innerHTML);
+
+// //modifico el contenido textual
+// titulo.innerText = "Elegí lo mejor";
+// alert(titulo.innerText);
+
+//innerHTML
+
+// let container = document.getElementById("container");
+// console.log(container);
+
+// //cambiar/ definir el contenido de ese div vacío
+// container.innerHTML = "<h1>Tu tienda favorita</h1><p>Te estamos esperando</p>";
+
+// //className
+// container.className = "fontsize encabezado";
+
+//createElements
+let parrafo = document.createElement("p");
+parrafo.innerHTML = "<h2>Bienvenidos</h2>";
+
+document.body.append(parrafo);
+
+
 
 
 
