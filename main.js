@@ -714,10 +714,13 @@ const productos = ["harina", 500, "sku302", true, "pureza", "disco"];
 
 ///RETORNAR FUNCIONES II
 
+//Función Nombrada
 // function asignarOperacion (op){
 //   if (op=="sumar"){
+//     //retorna el resultado de ejecutar una función flecha
 //     return (a,b) => a + b;
 //   } else if (op=="restar"){
+//       //retorna el resultado de ejecutar una función flecha
 //     return (a,b) => a-b;
 //   }
 // }
@@ -787,32 +790,32 @@ const productos = ["harina", 500, "sku302", true, "pureza", "disco"];
 // const compraTotal = cervezasLatas.reduce ((acumulador, cerveza) => acumulador + cerveza.precio ,0)
 // console.log(compraTotal);
 
-// const cervezasLatas = [
-//   {
-//     nombre: "patagonia",
-//     precio: 700
-//   },
-//   {
-//     nombre: "patagonia",
-//     precio: 800
-//   },
-//   {
-//     nombre: "estela",
-//     precio: 500
-//   },
-//   {
-//     nombre: "andes origen",
-//     precio: 600
-//   },
-//   {
-//     nombre: "brahma",
-//     precio: 450
-//   },
-//   {
-//     nombre: "corona origen",
-//     precio: 450
-//   },
-// ];
+const cervezasLatas = [
+  {
+    nombre: "patagonia",
+    precio: 700
+  },
+  {
+    nombre: "patagonia",
+    precio: 800
+  },
+  {
+    nombre: "estela",
+    precio: 500
+  },
+  {
+    nombre: "andes origen",
+    precio: 600
+  },
+  {
+    nombre: "brahma",
+    precio: 450
+  },
+  {
+    nombre: "corona origen",
+    precio: 450
+  },
+];
 
 /*-------------CLASE 08-----------*/
 /*-------------FUNCIONES DE ORDEN SUPERIOR II-----------*/
@@ -916,10 +919,86 @@ const productos = ["harina", 500, "sku302", true, "pureza", "disco"];
 // container.className = "fontsize encabezado";
 
 //createElements
-let parrafo = document.createElement("p");
-parrafo.innerHTML = "<h2>Bienvenidos</h2>";
+// let parrafo = document.createElement("p");
+// parrafo.innerHTML = "<h2>Bienvenidos</h2>";
 
-document.body.append(parrafo);
+// document.body.append(parrafo);
+
+// for (var i = 0; i < 3; i++) {
+//   setTimeout(() => console.log(i), 1);
+// }
+
+//---after02---
+
+//funciones clásicas/ función nombrada/ hoisting: puedo llamar a la función, inclusive, antes de inicializarla/crearla
+
+console.log(saludo("Juan"));
+console.log(saludo("Hernán"));
+console.log(saludo("Romina"));
+
+//creo/inicializo la  función
+function saludo (nombre){
+  return "Hola " + nombre;
+} 
+
+//funciones anónimas sin hoisting
+// console.log(saluda("Jorge")); // error de referencia - no puedo llamarla antes de la inicialización
+
+let saluda = function (nombre){
+  return "Saludos " + nombre;
+}
+console.log(saluda("Jorge"));
+
+// funciones flecha 
+//1-Son anónimas
+//2 no necesitan la palabra reservada function
+//3 no permite hoisting
+//4 si es de sólo una línea la instrucción, puede ir sin return
+//5- También le puedo sacar las llaves
+
+let saludar = (nombre) =>  "Bienvenidos" + nombre;
+console.log(saludar("Máximo"));
+
+//otra función flecha
+let sumar = (num1, num2) => {
+  return num1 + num2;
+}
+
+console.log(sumar(50,50));
+
+///RETORNAR FUNCIONES II
+
+//Función Nombrada
+function asignarOperacion (op){
+  if (op=="sumar"){
+    //retorna el resultado de ejecutar una función flecha
+    return (a,b) => a + b;
+  } else if (op=="restar"){
+      //retorna el resultado de ejecutar una función flecha
+    return (a,b) => a-b;
+  }
+}
+
+let suma = asignarOperacion ("sumar");
+let resta = asignarOperacion ("restar");
+
+console.log(suma(10,20));
+console.log(resta(5,2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
