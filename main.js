@@ -876,6 +876,10 @@ const cervezasLatas = [
 /*-------------CLASE 09-----------*/
 /*-------------DOM-----------*/
 
+//document es un objeto global, que convierte las etiquetas html en nodos (objetos) en JS
+//accedo al body del html mediante el objeto global document
+console.log(document.body);
+
 // console.log(document.body);
 // console.log(document.head);
 
@@ -918,6 +922,7 @@ const cervezasLatas = [
 // //className
 // container.className = "fontsize encabezado";
 
+
 //createElements
 // let parrafo = document.createElement("p");
 // parrafo.innerHTML = "<h2>Bienvenidos</h2>";
@@ -928,62 +933,142 @@ const cervezasLatas = [
 //   setTimeout(() => console.log(i), 1);
 // }
 
-//---after02---
+//---AFTER 02---
 
 //funciones clásicas/ función nombrada/ hoisting: puedo llamar a la función, inclusive, antes de inicializarla/crearla
 
-console.log(saludo("Juan"));
-console.log(saludo("Hernán"));
-console.log(saludo("Romina"));
+// console.log(saludo("Juan"));
+// console.log(saludo("Hernán"));
+// console.log(saludo("Romina"));
 
-//creo/inicializo la  función
-function saludo (nombre){
-  return "Hola " + nombre;
-} 
+// //creo/inicializo la  función
+// function saludo (nombre){
+//   return "Hola " + nombre;
+// } 
 
-//funciones anónimas sin hoisting
-// console.log(saluda("Jorge")); // error de referencia - no puedo llamarla antes de la inicialización
+// //funciones anónimas sin hoisting
+// // console.log(saluda("Jorge")); // error de referencia - no puedo llamarla antes de la inicialización
 
-let saluda = function (nombre){
-  return "Saludos " + nombre;
+// let saluda = function (nombre){
+//   return "Saludos " + nombre;
+// }
+// console.log(saluda("Jorge"));
+
+// // funciones flecha 
+// //1-Son anónimas
+// //2 no necesitan la palabra reservada function
+// //3 no permite hoisting
+// //4 si es de sólo una línea la instrucción, puede ir sin return
+// //5- También le puedo sacar las llaves
+
+// let saludar = (nombre) =>  "Bienvenidos" + nombre;
+// console.log(saludar("Máximo"));
+
+// //otra función flecha
+// let sumar = (num1, num2) => {
+//   return num1 + num2;
+// }
+
+// console.log(sumar(50,50));
+
+// ///RETORNAR FUNCIONES II
+
+// //Función Nombrada
+// function asignarOperacion (op){
+//   if (op=="sumar"){
+//     //retorna el resultado de ejecutar una función flecha
+//     return (a,b) => a + b;
+//   } else if (op=="restar"){
+//       //retorna el resultado de ejecutar una función flecha
+//     return (a,b) => a-b;
+//   }
+// }
+
+// let suma = asignarOperacion ("sumar");
+// let resta = asignarOperacion ("restar");
+
+// console.log(suma(10,20));
+// console.log(resta(5,2));
+
+/*-------------CLASE 10-----------*/
+/*-------------DOM + EVENTOS-----------*/
+
+// let variableNueva = document.getElementsByClassName("secciones");
+//variable se transforma en un nodo
+// variableNueva[3].remove();
+
+//GETELEMENTSBYTAGNAME ME CREA UN ARRAY CON LOS ELEMENTOS QUE CUMPLAN LA CONDICION
+// let variable = document.getElementsByTagName("p");
+// console.log(variable[1]);
+
+// let variable = document.createElement("p");
+// // console.log(variable);
+// variable.innerHTML = "<h2>Bienvenidos</h2>";
+
+// //agrego como hijo el nodo creado (variable) con append
+// document.body.append(variable);
+
+// //remover nodos remove ()
+// variable.remove();
+
+//PLANTILLLAS LITERALES E INNERHTML
+
+// let producto = {
+//   id: 1,
+//   nombre: "patagonia",
+//   precio: 650
+// };
+
+// let plantillaNueva = document.createElement("div");
+// //lo declaramos el html con backtick alt+ 96 ``
+// plantillaNueva.innerHTML = `
+// ID: ${producto.id} - Producto: ${producto.nombre} - Precio: $${producto.precio};
+// `;
+
+// document.body.appendChild(plantillaNueva);
+
+//querySelector
+
+// let otroParrafo = document.querySelector(".secciones");
+// // let unParrafoMas = document.querySelector(".texto");
+// console.log(otroParrafo);
+
+//EVENTOS
+
+//OPCION 01 CON NOMBRE DE EVENTO Y FUNCION DE RETORNO COMO PARAMETROS
+// let boton = document.getElementById("btnPrincipal");
+// boton.addEventListener('click', respuestaClick)
+//   // function respuestaClick (){
+//   //   console.log("respuesta 1");
+//   // }
+
+//OPCION 02 EMPLEAR PROPIEDAD DEL NODO
+// boton.onclick = () => { console.log("respuesta 2");}
+
+//OPCION 03 comO ATRIBUTO HTML NO RECOMENDADO USAR OPCIONES 01 O 02
+
+//EVENTOS DEL MOUSE
+
+// boton.onmousemove = () => {
+//   console.log("move");
+// }
+
+//EVENTO SUBMIT
+
+let miFormulario = document.getElementById("formulario");
+
+miFormulario.addEventListener('submit', validarFormulario);
+
+function validarFormulario (e){
+  e.preventDefault();
+  console.log("Formulario Enviado");
 }
-console.log(saluda("Jorge"));
 
-// funciones flecha 
-//1-Son anónimas
-//2 no necesitan la palabra reservada function
-//3 no permite hoisting
-//4 si es de sólo una línea la instrucción, puede ir sin return
-//5- También le puedo sacar las llaves
 
-let saludar = (nombre) =>  "Bienvenidos" + nombre;
-console.log(saludar("Máximo"));
 
-//otra función flecha
-let sumar = (num1, num2) => {
-  return num1 + num2;
-}
 
-console.log(sumar(50,50));
 
-///RETORNAR FUNCIONES II
 
-//Función Nombrada
-function asignarOperacion (op){
-  if (op=="sumar"){
-    //retorna el resultado de ejecutar una función flecha
-    return (a,b) => a + b;
-  } else if (op=="restar"){
-      //retorna el resultado de ejecutar una función flecha
-    return (a,b) => a-b;
-  }
-}
-
-let suma = asignarOperacion ("sumar");
-let resta = asignarOperacion ("restar");
-
-console.log(suma(10,20));
-console.log(resta(5,2));
 
 
 

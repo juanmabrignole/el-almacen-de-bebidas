@@ -21,13 +21,13 @@
 <body>
 
   <h1 id="encabezado">Tienda de Bebidas</h1>
-  <h1 id="nivel2">Aquí encontrarás todas las bebidas que gustes</h1>
+  <h2 id="nivel2">Aquí encontrarás todas las bebidas que gustes</h2>
 
   <!--Acceso a los nodos-->
   <!--getElementById-->
-  
   <div id="app">
-    <p id="parrafo1">Hola Mundo!</p>
+    <h1 id="almacen-title" >El almacen de bebidas</h1>
+    <p id="parrafo">Hola Mundo!</p>
   </div>
 
   <!--getElementsByClassName-->
@@ -47,10 +47,10 @@
   
   </div>
 
-  <!--innerText-->
   <h1 id="titulo">El almacen de bebidas</h1>
 
   <!--InnerHTML-->
+  <!--es un dív vacío que voy a cargarlo desde JS-->
  <div id="container"></div>
 
  <!--propiedad value-->
@@ -62,8 +62,28 @@
 
  <!--QuerySelector-->
  <div id="contenedor">
-  <p class="texto"></p>
- </div>
+   <p class="texto"></p>
+</div>
+
+ <!--EVENTOS JS-->
+ <h2>Coder House</h2>
+ <button id="btnPrincipal">CLICK</button>
+
+ <!--OPCION 03 evento como atributo
+ <input type="button" value="CLICK2" onclick="alert('Respuesta 3');">
+-->
+ <!--VENTO CHANGE-->
+
+ <input id="input" placeholder="Ingrese su nombre: " name="name"/>
+<p id="login"></p>
+
+<!--EVENTO SUBMIT-->
+<form id="formulario">
+  <input type="text">
+  <input type="number">
+  <input type="submit" value="Enviar">
+</form>
+
    
 
 <!--Forma correcta de linkear nuestro documento JavaScript-->
