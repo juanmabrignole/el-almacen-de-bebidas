@@ -1055,14 +1055,82 @@ console.log(document.body);
 
 //EVENTO SUBMIT
 
-let miFormulario = document.getElementById("formulario");
+// let miFormulario = document.getElementById("formulario");
 
-miFormulario.addEventListener('submit', validarFormulario);
+// miFormulario.addEventListener('submit', validarFormulario);
 
-function validarFormulario (e){
-  e.preventDefault();
-  console.log("Formulario Enviado");
-}
+// function validarFormulario (e){
+//   e.preventDefault();
+//   console.log("Formulario Enviado");
+// }
+
+/*-------------OBJETO STORAGE-----------*/
+
+//localStorage
+//seter
+// localStorage.setItem("Bienvenido", "Hola People");
+// localStorage.setItem("esValido", true);
+// localStorage.setItem("unNumero", 20);
+
+// //localStorage.getItem - lo que obtenemos lo guardamos en variables
+// //getter
+// // 1- inicializar los metodos/funciones
+
+// let mensaje = localStorage.getItem("Bienvenido");
+// let esValido = localStorage.getItem("esValido");
+// let numero = localStorage.getItem("unNumero");
+
+// // 2- llamo a las funciones/metodos
+// console.log(mensaje);
+// console.log(esValido);
+// console.log(numero);
+
+//sessionStorage
+//seter
+//sessionStorage.setItem
+
+// sessionStorage.setItem("seleccionados", [1,2,3,4]);
+// sessionStorage.setItem("email", "hola@servidor.com");
+
+// //sessionStorage.getItem
+
+// let email = sessionStorage.getItem("email");
+
+// console.log(typeof email);
+// console.log(email);
+
+//eliminar datos del Storage
+
+//enLocaleStorage
+
+// localStorage.setItem("temaHoy", "Storage");
+
+// //lo eliminamos
+// localStorage.removeItem("temaHoy");
+
+/*-------------JSON-----------*/
+
+const productos1 = [
+  {
+    nombre: "patagonia", precio: 800
+  },
+  {
+    nombre: "modelo", precio: 900
+  }];
+
+  //a la antigua
+// localStorage.setItem("producto1", productos1);
+
+localStorage.setItem("productos", JSON.stringify(productos1));
+
+
+
+
+
+
+
+
+
 
 
 
