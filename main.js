@@ -1110,20 +1110,90 @@ console.log(document.body);
 
 /*-------------JSON-----------*/
 
-const productos1 = [
-  {
-    nombre: "patagonia", precio: 800
-  },
-  {
-    nombre: "modelo", precio: 900
-  }];
+// const producto2 = {
+//   id: 0002,
+//   nombre: "Patagonia",
+//   precio: 500,
+//   stock: true
+// }
 
-  //a la antigua
-// localStorage.setItem("producto1", productos1);
+// //sin JSON
+// // localStorage.setItem("producto2", producto2);
 
-localStorage.setItem("productos", JSON.stringify(productos1));
+// //LO CONVERTIMOS A JSON CON EL METODO STRINGIFY
+// const enJSON = JSON.stringify(producto2);
+// console.log(enJSON);
+// console.log( typeof enJSON);
 
+// //AHORA LO GUARDO EN LOCALSTORAGE
+// localStorage.setItem("producto2", enJSON);
 
+/*-------------OPERADORES AVANZADOS-----------*/
+
+//EL OPERADOR ++
+
+// let num = 10;
+
+// //aumentar a la antigua
+// num = num + 1;
+// // console.log(num);
+
+// //PRIMERA SIMPLIFICACION
+// num += 1; // le sumo 1 a lo que ya tenía en num
+
+// //SEGUNDA SIMPLIFICACION
+// num++; //le sumo 1 a lo que ya tenía en num
+// console.log(num);
+
+// //OPERADOR TERNARIO
+// //A LA ANTIGUA
+
+// let temperatura = 31;
+
+// // if (temperatura > 30){
+// //   alert("Día caluroso!");
+// // } else {
+// //   alert("Día lindo!");
+// // }
+
+// // SIMPLIFICAMOS CON TERNARIO
+
+// (temperatura > 30) ? alert("Dia caluroso") : alert("Dia lindo!"); 
+
+// const usuario = {
+//   nombre: "Juanma",
+//   edad: 15
+// }
+
+// const permiso = (usuario.edad >= 18) ? true : false;
+
+// permiso ? alert("Puedes comprar cerve") : alert("No chiquito, no puedes comprar cerve");
+
+// OPERADOR && AND
+
+const carrito = [];
+
+// a la old school
+// if (carrito.length === 0){
+//   alert("No tienes cerves en el carrito");
+// } else {
+//   alert("Tu carrito tiene una cerve");
+// }
+
+// //con con AND &&
+// carrito.length === 0 && console.log("Tu carrito no tiene ni una cerve");
+
+//OPERADOR OR || 
+
+const usuario1 = {
+  nombre: "Juan",
+  edad:15 
+};
+
+const usuario2 = null;
+
+console.log(usuario1 || "Estás adentro");
+console.log(usuario2 || "Usuario no registrado");
 
 
 
