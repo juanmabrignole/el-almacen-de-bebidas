@@ -1171,7 +1171,7 @@ console.log(document.body);
 
 // OPERADOR && AND
 
-const carrito = [];
+// const carrito = [];
 
 // a la old school
 // if (carrito.length === 0){
@@ -1185,15 +1185,109 @@ const carrito = [];
 
 //OPERADOR OR || 
 
-const usuario1 = {
-  nombre: "Juan",
-  edad:15 
-};
+// const usuario1 = {
+//   nombre: "Juan",
+//   edad:15 
+// };
 
-const usuario2 = null;
+// const usuario2 = null;
 
-console.log(usuario1 || "Estás adentro");
-console.log(usuario2 || "Usuario no registrado");
+// console.log(usuario1 || "Estás adentro");
+// console.log(usuario2 || "Usuario no registrado");
+
+
+// // /*-------------OPERADORES AVANZADOS II-----------*/
+// //desestructuracion
+// const usuario = {
+//   nombre: "Juanma",
+//   edad: 39,
+//   cursos: {
+//     javascript: "aprobado",
+//     html: "aprobado",
+//   }
+// }
+
+// // inmutabilidad= guardo el valor de una propiedad en una variable, para no modificar o resguardar 
+//  //a la antigua
+
+// //  let nombre = usuario.nombre;
+// //  console.log(nombre);
+
+// //  let edad = usuario.edad;
+// //  console.log(edad);
+
+//  //simplificar con Desestructuracion
+// const {nombre, edad} = usuario;
+// console.log(nombre);
+// console.log(edad);
+
+//Otro tipo  de desestructuración
+
+// const usuario1 = {
+//   nombre: "John Doe",
+//   edad: 32,
+//   telefono: {
+//       cel: 113334444,
+//       casa: null,
+//       trabajo: 113325555
+//   }
+// }
+
+// const {nombre, telefono: {trabajo}} = usuario1;
+// console.log(trabajo);
+
+// // //ALIAS
+
+// // //desestructuramos el objeto patagonia
+
+// const patagonia = {
+//   item_id: 0002,
+//   product_name: "patagonia",
+//   price_per_unit: 800
+// }
+
+// const {
+//   item_id: id,
+//   product_name: nombre1,
+//   price_per_unit: precio
+// } = patagonia
+
+// console.log(id) // 0002
+// console.log(nombre1) // "patagonia"
+// console.log(precio) // 800
+
+//Spread
+
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"];
+// // console.log(nombres);
+
+// console.log(...nombres);
+
+// //spread de ARRAYS
+// const numeros = [4, 77, 92, 10, 3, -32, 54, 11];
+
+// console.log(Math.max(...numeros));
+
+// const nombres1 = ["Juan", "Julieta"];
+// const nombres2 = ["Carlos", "Mariela"];
+
+// const nombres3 = [...nombres1,...nombres2];
+// console.log(nombres3);
+
+//Spread en un objeto
+
+const nombres = ["Juan", "Julieta", "Carlos", "Mariela"];
+
+const nombresObj = {
+  ...nombres
+}
+
+console.log(nombresObj);
+
+
+
+
+
 
 
 
