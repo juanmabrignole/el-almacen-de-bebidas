@@ -1276,13 +1276,89 @@ console.log(document.body);
 
 //Spread en un objeto
 
-const nombres = ["Juan", "Julieta", "Carlos", "Mariela"];
+// const nombres = ["Juan", "Julieta", "Carlos", "Mariela"];
 
-const nombresObj = {
-  ...nombres
-}
+// const nombresObj = {
+//   ...nombres
+// }
 
-console.log(nombresObj);
+// console.log(nombresObj);
+
+// // /*-------------LIBRERIAS-----------*/
+
+//SWEETALERT2
+
+//ACCEDO AL DOM
+const sweetAlert = document.querySelector('#sweetAlert');
+
+//CREAMOS EL EVENTO
+sweetAlert.addEventListener('click', () => {
+  //UN OBJETO COMO PARAMETRO DEL METÓDO SWEET ALERT
+  Swal.fire (
+    {
+      title: '¿Eres mayor de edad?',
+      text: 'Veamos si puedes ingresar',
+      // html: '<b class="tudiaalert">Hola!</b>'
+      icon: 'warning',
+      // iconHtml: '<i class="bi bi-cup-straw"></i>',
+      iconColor:  '#cb4335',
+      footer: '<span class="rojo">Información Importante</span>',
+      // width: '50%'
+      padding: '1rem',
+      // background: '#000'
+      // timer: '5000',
+      // timerProgressBar: true, 
+      // toast: true,
+      // position: 'bottom-end'
+  
+      //inputs
+      // input: 'text',
+      // inputPlaceholder: 'Ingrese su edad',
+      // inputValue: "0000"
+  
+      //BOTON CONFIRMAR
+      showConfirmButton: true,
+      confirmButtonText: 'Si, soy mayor de edad',
+      confirmButtonColor: '#3498db',
+      confirmButtonAriaLabel: 'mayor de edad',
+  
+       //BOTON CANCELAR
+       showCancelButton: true,
+       cancelButtonText: 'No soy mayor de edad',
+       cancelButtonColor: '#d7bde2',
+       cancelButtonAriaLabel: 'menor de edad',
+  
+       //BOTON DE CERRAR ALERTA
+      showCloseButton: true,
+      closeButtonAriaLabel: 'cerrar',
+  
+      //IMAGENES
+      imageUrl: 'img/beerModalConfirm.jpg',
+      imageWidth: '250px',
+      imageHeight: '250px',
+      imgAlt: 'Imagen brindis'
+    }) 
+    .then((resultado) => { // AFUERA DEL OBJETO, PERO DENTRO DEL EVENTO, CONDICIONAL
+      if (resultado.isConfirmed) {
+        Swal.fire ({
+          title: 'Bienvenido a la tienda'
+        })
+      } else {
+        Swal.fire (
+          {
+          title: 'No puedes ingresar a la tienda'
+        })
+      }
+    });
+})
+
+
+
+
+
+
+
+
 
 
 
