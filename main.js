@@ -1289,68 +1289,137 @@ console.log(document.body);
 //SWEETALERT2
 
 //ACCEDO AL DOM
-const sweetAlert = document.querySelector('#sweetAlert');
+// const sweetAlert = document.querySelector('#sweetAlert');
 
-//CREAMOS EL EVENTO
-sweetAlert.addEventListener('click', () => {
-  //UN OBJETO COMO PARAMETRO DEL METÓDO SWEET ALERT
-  Swal.fire (
-    {
-      title: '¿Eres mayor de edad?',
-      text: 'Veamos si puedes ingresar',
-      // html: '<b class="tudiaalert">Hola!</b>'
-      icon: 'warning',
-      // iconHtml: '<i class="bi bi-cup-straw"></i>',
-      iconColor:  '#cb4335',
-      footer: '<span class="rojo">Información Importante</span>',
-      // width: '50%'
-      padding: '1rem',
-      // background: '#000'
-      // timer: '5000',
-      // timerProgressBar: true, 
-      // toast: true,
-      // position: 'bottom-end'
+// //CREAMOS EL EVENTO
+// sweetAlert.addEventListener('click', () => {
+//   //UN OBJETO COMO PARAMETRO DEL METÓDO SWEET ALERT
+//   Swal.fire (
+//     {
+//       title: '¿Eres mayor de edad?',
+//       text: 'Veamos si puedes ingresar',
+//       // html: '<b class="tudiaalert">Hola!</b>'
+//       icon: 'warning',
+//       // iconHtml: '<i class="bi bi-cup-straw"></i>',
+//       iconColor:  '#cb4335',
+//       footer: '<span class="rojo">Información Importante</span>',
+//       // width: '50%'
+//       padding: '1rem',
+//       // background: '#000'
+//       // timer: '5000',
+//       // timerProgressBar: true, 
+//       // toast: true,
+//       // position: 'bottom-end'
   
-      //inputs
-      // input: 'text',
-      // inputPlaceholder: 'Ingrese su edad',
-      // inputValue: "0000"
+//       //inputs
+//       // input: 'text',
+//       // inputPlaceholder: 'Ingrese su edad',
+//       // inputValue: "0000"
   
-      //BOTON CONFIRMAR
-      showConfirmButton: true,
-      confirmButtonText: 'Si, soy mayor de edad',
-      confirmButtonColor: '#3498db',
-      confirmButtonAriaLabel: 'mayor de edad',
+//       //BOTON CONFIRMAR
+//       showConfirmButton: true,
+//       confirmButtonText: 'Si, soy mayor de edad',
+//       confirmButtonColor: '#3498db',
+//       confirmButtonAriaLabel: 'mayor de edad',
   
-       //BOTON CANCELAR
-       showCancelButton: true,
-       cancelButtonText: 'No soy mayor de edad',
-       cancelButtonColor: '#d7bde2',
-       cancelButtonAriaLabel: 'menor de edad',
+//        //BOTON CANCELAR
+//        showCancelButton: true,
+//        cancelButtonText: 'No soy mayor de edad',
+//        cancelButtonColor: '#d7bde2',
+//        cancelButtonAriaLabel: 'menor de edad',
   
-       //BOTON DE CERRAR ALERTA
-      showCloseButton: true,
-      closeButtonAriaLabel: 'cerrar',
+//        //BOTON DE CERRAR ALERTA
+//       showCloseButton: true,
+//       closeButtonAriaLabel: 'cerrar',
   
-      //IMAGENES
-      imageUrl: 'img/beerModalConfirm.jpg',
-      imageWidth: '250px',
-      imageHeight: '250px',
-      imgAlt: 'Imagen brindis'
-    }) 
-    .then((resultado) => { // AFUERA DEL OBJETO, PERO DENTRO DEL EVENTO, CONDICIONAL
-      if (resultado.isConfirmed) {
-        Swal.fire ({
-          title: 'Bienvenido a la tienda'
-        })
-      } else {
-        Swal.fire (
-          {
-          title: 'No puedes ingresar a la tienda'
-        })
-      }
-    });
-})
+//       //IMAGENES
+//       imageUrl: 'img/beerModalConfirm.jpg',
+//       imageWidth: '250px',
+//       imageHeight: '250px',
+//       imgAlt: 'Imagen brindis'
+//     }) 
+//     .then((resultado) => { // AFUERA DEL OBJETO, PERO DENTRO DEL EVENTO, CONDICIONAL
+//       if (resultado.isConfirmed) {
+//         Swal.fire ({
+//           title: 'Bienvenido a la tienda'
+//         })
+//       } else {
+//         Swal.fire (
+//           {
+//           title: 'No puedes ingresar a la tienda'
+//         })
+//       }
+//     });
+// })
+
+/*------------------------AJAX & FETCH---------------*/
+
+//jsonPlaceholder
+const urlUsuarios = "https://jsonplaceholder.typicode.com/users";
+const listaUsuarios = document.querySelector("#lista-usuarios");
+
+fetch(urlUsuarios)
+ .then((response) => response.json())
+ .then((data) => {
+  data.forEach((usuario) => {
+    const li = document.createElement('li');
+    li.textContent = usuario.name + "Teléfono: " + usuario.phone;
+    listaUsuarios.appendChild(li);
+  } ) 
+ })
+
+ //PokéApi
+ 
+ const listaPokemon = document.querySelector("#lista-pokemon");
+
+ fetch("https://pokeapi.co/api/v2/pokemon")
+ .then((response) => response.json())
+ .then((data) => {
+  const pokemons = data.results;
+  pokemons.forEach((pokemon) => {
+    const li = document.createElement('li');
+    li.textContent = pokemon.name;
+    listaPokemon.appendChild(li);
+  })
+ })
+
+ //fakeStoreApi
+
+ document.addEventListener('DOMContentLoaded', traerProductos);
+ const contenedor = document.querySelector("#contenedor");
+
+async function traerProductos(){
+  const url = "https://fakestoreapi.com/products";
+
+  try {
+    const resultado = await fetch(url);
+    const respuesta = await resultado.json();
+    pintarProductos(respuesta)
+  } catch (error){
+    console.log(error)
+  }
+}
+
+function pintarProductos(productos){
+  // console.log(productos);
+  productos.forEach((prod) => {
+    const {id, title, price, category, description, image} = prod;
+    contenedor.innerHTML += `
+    <div class="card" style="width: 18rem;">
+    <img src="${image}" class="card-img-top" alt="...">
+    <div class="card-body">
+    <h5 class="card-title">${title}</h5>
+    <p class="card-text">${description}</p>
+    <p class="card-text">Precio: ${price}</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  
+    `
+  })
+}
+
+
 
 
 
