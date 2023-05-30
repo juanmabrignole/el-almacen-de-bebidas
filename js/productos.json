@@ -1,0 +1,182 @@
+[
+  {
+      "id": "cerveza-01",
+      "titulo": "Cerveza Bira",
+      "imagen": "./img/cervezas/01.jpg",
+      "categoria": {
+          "nombre": "cervezas",
+          "id": "cervezas"
+      },
+      "precio": 800
+  },
+  {
+      "id": "cerveza-02",
+      "titulo": "Cerveza Huerca",
+      "imagen": "./img/cervezas/02.jpg",
+      "categoria": {
+          "nombre": "cervezas",
+          "id": "cervezas"
+      },
+      "precio": 900
+  },
+  {
+      "id": "cerveza-03",
+      "titulo": "Cerveza Corona",
+      "imagen": "./img/cervezas/03.jpg",
+      "categoria": {
+          "nombre": "cervezas",
+          "id": "cervezas"
+      },
+      "precio": 900
+  },
+  {
+      "id": "cerveza-04",
+      "titulo": "Cerveza Budweizer",
+      "imagen": "./img/cervezas/04.jpg",
+      "categoria": {
+          "nombre": "cervezas",
+          "id": "cervezas"
+      },
+      "precio": 850
+  },
+  {
+      "id": "cerveza-05",
+      "titulo": "Cerveza Heineken",
+      "imagen": "./img/cervezas/05.jpg",
+      "categoria": {
+          "nombre":"cervezas",
+          "id": "cervezas"
+      },
+      "precio": 900
+  },
+  {
+      "id": "vino-01",
+      "titulo": "Vino Rasteau",
+      "imagen": "./img/vinos/01.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 3000
+  },
+  {
+      "id": "vino-02",
+      "titulo": "Vino Corvo",
+      "imagen": "./img/vinos/02.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 2500
+  },
+  {
+      "id": "vino-03",
+      "titulo": "Vino Espirit",
+      "imagen": "./img/vinos/03.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 5000
+  },
+  {
+      "id": "vino-04",
+      "titulo": "Vino Paros",
+      "imagen": "./img/vinos/04.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 2000
+  },
+  {
+      "id": "vino-05",
+      "titulo": "Vino Broadleaf",
+      "imagen": "./img/vinos/05.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 5000
+  },
+  {
+      "id": "vino-06",
+      "titulo": "Vino Ferrari Maximum",
+      "imagen": "./img/vinos/06.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 4000
+  },
+  {
+      "id": "vino-07",
+      "titulo": "Vino 2019",
+      "imagen": "./img/vinos/07.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 4600
+  },
+  {
+      "id": "vino-08",
+      "titulo": "Vino Moda",
+      "imagen": "./img/vinos/08.jpg",
+      "categoria": {
+          "nombre": "vinos",
+          "id": "vinos"
+      },
+      "precio": 3500
+  },
+  {
+      "id": "blanca-01",
+      "titulo": "Jagermeister",
+      "imagen": "./img/blancas/01.jpg",
+      "categoria": {
+          "nombre": "blancas",
+          "id": "blancas"
+      },
+      "precio": 5000
+  },
+  {
+      "id": "blanca-02",
+      "titulo": "Desperados",
+      "imagen": "./img/blancas/02.jpg",
+      "categoria": {
+          "nombre": "blancas",
+          "id": "blancas"
+      },
+      "precio": 3000
+  },
+  {
+      "id": "blanca-03",
+      "titulo": "Woodys Gin",
+      "imagen": "./img/blancas/03.jpg",
+      "categoria": {
+          "nombre": "blancas",
+          "id": "blancas"
+      },
+      "precio": 4000
+  },
+  {
+      "id": "blanca-04",
+      "titulo": "Esbjaerg Vodka",
+      "imagen": "./img/blancas/04.jpg",
+      "categoria": {
+          "nombre": "blancas",
+          "id": "blancas"
+      },
+      "precio": 5000
+  },
+  {
+      "id": "blanca-05",
+      "titulo": "Smirnoff",
+      "imagen": "./img/blancas/05.jpg",
+      "categoria": {
+          "nombre": "blancas",
+          "id": "blancas"
+      },
+      "precio": 4000
+  }
+]
